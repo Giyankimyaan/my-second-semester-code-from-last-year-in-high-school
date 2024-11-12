@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giyan</title>
+    <link rel="stylesheet" href="nilaimurid.css">
+</head>
+<body>
+    <script type="text/javascript">
+        function hasildata(){
+            document.murid.a.value = document.murid.ns.value;
+            document.murid.b.value = document.murid.tm.value;
+            document.murid.c.value = document.murid.ttl.value;
+            document.murid.d.value = document.murid.Jk.value;
+            document.murid.e.value = document.murid.alm.value;
+            document.murid.f.value = document.murid.kls.value;
+            document.murid.g.value = document.murid.jrs.value;
+        }
+
+
+    </script>
+    <table border="1" widht="50%" align="center" class="table">
+        <tr>
+            <td colspan="2" widht="100%" text align="center"><img src="01-YR.png" width="150px" height="150px"  alt=""><h2>Website Informasi Nilai Siswa</h2></td>
+        </tr>
+        <form name="murid">
+            <tr>
+                <td>
+                    Menu:<br>
+                    <a href="login.html">-Logout</a><br>
+                    <a href="nilai.html">-Menu Masukan Nilai</a><br>
+                    <a href="#">-Menu Data Siswa</a><br>
+                </td>
+                <td>
+                    Nama Siswa:<input type="text" name="ns"><br>
+                    tempat:<input type="text" name="tm"><br>
+                    tanggallahir:<input type="date" name="ttl"><br>
+                    jenisKelamin:<input type="radio" name="Jk" value="Laki-Laki">Laki-Laki <input type="radio" name="Jk" value="Perempuan">Perempuan <br>
+                    Alamat:<textarea name="alm"></textarea><br>
+                    Kelas:<select name="kls">
+                        <option value="X">X</option>
+                        <option value="XI">XI</option>
+                        <option value="XII">XII</option>
+                    </select><br>
+                    Jurusan:<select name="jrs">
+                        <option value="PPLG">PPLG</option>
+                        <option value="DKV">DKV</option>
+                        <option value="MPLB">MPLB</option>
+                        <option value="AKL">AKL</option>
+                        <option value="PM">PM</option>
+                    </select><br>
+                    <input type="button" value="Kirim" onclick="hasildata()">
+                    <h1>hasildata</h1>
+                        Nama Siswa : <input type="text" name="a"><br>
+                        tempat: <input type="text" name="b"><br>
+                        tanggallahir: <input type="text" name="c"><br>
+                        Jenis Kelamin: <input type="text" name="d"><br>
+                        alamat: <input type="text" name="e"><br>
+                        Kelas : <input type="text" name="f"><br>
+                        Jurursan : <input type="text" name="g"><br>
+                         Dibuat Oleh:Giyan anthony.k
+                </td>
+            </tr>
+
+        </form>
+    </table>
+</body>
+</html>

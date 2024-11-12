@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giyan</title>
+    <link rel="stylesheet" href="nilaimurid.css">
+</head>
+<body>
+    <script type="text/javascript">
+        function hasildata(){
+            document.murid.a.value = document.murid.ns.value;
+            document.murid.b.value = document.murid.kls.value;
+            document.murid.c.value = document.murid.Jk.value;
+            document.murid.d.value = document.murid.pmp.value;
+            document.murid.e.value = document.murid.nt1.value;
+            document.murid.f.value = document.murid.nt2.value;
+            document.murid.g.value = document.murid.nuh.value;
+            document.murid.h.value = document.murid.np.value;
+
+            var tugas1 = parseInt(document.murid.nt1.value);
+            var tugas2 = parseInt(document.murid.nt2.value);
+            var ulanganharian = parseInt(document.murid.nuh.value);
+            var nilaipas = parseInt(document.murid.np.value);
+
+            var n12 = (tugas1 + tugas2) / 2;
+            var total = (n12 / 100 * 40) + (ulanganharian / 100 * 30) + (nilaipas / 100 * 30);
+
+            var predikat = "";
+            var keterangan = "";
+
+            document.murid.i.value = total;
+            if (total >= 90 && total <= 100) {
+                predikat = "A";
+                keterangan = "Sangat baik";
+            } else if (total >= 80 && total <= 89) {
+                predikat = "B";
+                keterangan = "Baik";
+            } else if (total >= 70 && total <= 79) {
+                predikat = "C";
+                keterangan = "Cukup";
+            } else if (total >= 60 && total <= 69) {
+                predikat = "D";
+                keterangan = "Kurang";
+            } else if (total < 60 && total >= 0) {
+                predikat = "E";
+                keterangan = "Sangat kurang";
+            }
+
+            document.murid.j.value = predikat;
+            document.murid.k.value = keterangan;
+        }
+    </script>
+    <table border="1" width="50%" align="center" class="table">
+        <tr>
+            <td colspan="2" width="100%" style="text-align: center;"><img src="01-YR.png" width="170px" height="170px"  alt=""><h1>Website Informasi Nilai Siswa</h1></td>
+        </tr>
+        <form name="murid">
+            <tr>
+                <td>
+                    Menu:<br>
+                    <a href="login.html">-Logout</a><br>
+                    <a href="#">-Menu Masukan Nilai</a><br>
+                    <a href="murid.html">-Menu Data Siswa</a><br>
+                </td>
+                <td>
+                    Nama Siswa:<input type="text" name="ns"><br>
+                    Kelas:<select name="kls">
+                        <option value="X">X</option>
+                        <option value="XI">XI</option>
+                        <option value="XII">XII</option>
+                    </select><br>
+                    jenisKelamin:<input type="radio" name="Jk" value="Laki-Laki">Laki-Laki <input type="radio" name="Jk" value="Perempuan">Perempuan <br>
+                    
+                    Pilih mata pelajaran:<select name="pmp">
+                        <option value="Mtk">Matematika</option>
+                        <option value="Bindo">B.indonesia</option>
+                        <option value="Beng">B.inggris</option>
+                        <option value="Ipas">Ipas</option>
+                        <option value="agm">Agama</option>
+                        <option value="ddk">Dasar-dasar kejuruan</option>
+                        <option value="Pjok">Pjok</option>
+                        <option value="Mkl">Muatan lokal</option>
+                        <option value="sejarah">Sejarah</option>
+                        <option value="PPKN">PPKN</option>
+                    </select><br>
+                    Nilai Tugas 1:<input type="text" name="nt1"><br>
+                    Nilai Tugas 2:<input type="text" name="nt2"><br>
+                    Nilai Ulangan Harian:<input type="text" name="nuh"><br>
+                    Nilai PAS:<input type="text" name="np"><br>
+                    <input type="button" value="Kirim" onclick="hasildata()">
+                    <h1>hasildata</h1>
+                    Nama Siswa : <input type="text" name="a"><br>
+                    Kelas : <input type="text" name="b"><br>
+                    Jenis Kelamin: <input type="text" name="c"><br>
+                    Mata pelajaran: <input type="text" name="d"><br>
+                    Nilai Tugas 1:<input type="text" name="e"><br>
+                    Nilai Tugas 2:<input type="text" name="f"><br>
+                    Nilai Ulangan Harian:<input type="text" name="g"><br>
+                    Nilai PAS:<input type="text" name="h"><br>
+                    Nilai Rata-Rata:<input type="text" name="i"><br>
+                    Predikat:<input type="text" name="j"><br>
+                    keterangan:<input type="text" name="k"><br>
+                    Dibuat Oleh:Giyan anthony.k
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>
